@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom'
 export default function NavBar() {
   const navBarItems = [
     {
-      label: 'Food Recipes',
+      label: 'Dinner Recipes',
       path: '/',
     },
     {
-      label: 'Cocktails',
+      label: 'Cocktail Recipes',
       path: '/cocktails',
     },
     {
