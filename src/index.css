@@ -7,3 +7,10 @@
     font-family: Roboto, sans-serif;
   }
 }
+
+body {
+  background-image: url(/src/assets/background-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
