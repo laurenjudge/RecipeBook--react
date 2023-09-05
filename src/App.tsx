@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <div className="w-11/12 max-w-[1800px] mx-auto">
+      <div className="w-11/12 max-w-[600px] mx-auto">
         <Routes>
           <Route path="/" element={<CookingRecipesList />} />
           <Route path="/cocktails" element={<CocktailsList />} />
