@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom'
+import { CollectionOptions, RecipeList } from '../types/recipes.types'
 import Card from './Card'
 import Image from './Image'
-import { CollectionOptions, RecipeList } from '../types/recipes.types'
+import Loader from './Loader'
 
 interface RecipeItems {
   recipes: RecipeList
@@ -41,13 +42,7 @@ export default function RecipeItemList(props: RecipeItems) {
 
         {
           props.isLoading &&
-          Array.from(Array(5)).map(
-            (e, i) => 
-              <Card variant="glass" key={i} classes="flex">
-                <div className="mr-3 bg-gray-200 rounded-md w-28 h-28 animate-pulse"></div>
-                <div className="w-3/5 h-5 bg-gray-200 rounded-full animate-pulse"></div>
-              </Card>
-          )
+          <Loader />
         }
 
         {

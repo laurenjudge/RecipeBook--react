@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom"
 import getRecipeById from "../api/getRecipeById"
 import Card from "../components/Card"
 import Image from "../components/Image"
-
+import Loader from '../components/Loader'
+import DropdownButton from '../components/DropdownButton'
 
 export default function RecipeDetails() {
   const { recipeType, id } = useParams()
@@ -14,6 +15,11 @@ export default function RecipeDetails() {
   } = getRecipeById(recipeType, id)
 
   return <>
+    {
+      isLoading &&
+      <Loader />
+    }
+
     { recipe &&
       <Card variant="glass">
         <div className="flex gap-5 mb-5">
