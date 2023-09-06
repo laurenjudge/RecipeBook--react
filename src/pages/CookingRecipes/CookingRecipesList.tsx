@@ -1,10 +1,7 @@
-import { useState } from "react"
 import RecipeItemList from "../../components/RecipeItemList"
 import getRecipes from "../../api/getRecipes"
-import Card from "../../components/Card"
 
 export default function CookingRecipesList() {
-  const dinnerRecipes = getRecipes('dinner-recipe')
   const {
     isLoading,
     hasError,
@@ -15,7 +12,7 @@ export default function CookingRecipesList() {
   return (
     <>
       {
-        recipes && <RecipeItemList recipes={recipes} />
+        <RecipeItemList recipes={recipes} isLoading={isLoading} hasError={hasError}/>
       }
     </>
   )
