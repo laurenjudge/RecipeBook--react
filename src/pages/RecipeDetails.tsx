@@ -39,7 +39,7 @@ export default function RecipeDetails() {
               <ul className="pl-4 list-disc">
                 {
                   recipe.ingredients.map((e, i) =>
-                    <li key={i}>{e}</li>
+                    <li key={i} className="text-sm sm:text-base">{e}</li>
                   )
                 }
               </ul>
@@ -53,7 +53,7 @@ export default function RecipeDetails() {
               <ol className="pl-4 list-decimal">
                 {
                   recipe.instructions.map((e, i) =>
-                    <li key={i} className="mb-3">{e}</li>
+                    <li key={i} className="mb-3 text-sm sm:text-base">{e}</li>
                   )
                 }
               </ol>
