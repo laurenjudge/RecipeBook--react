@@ -17,7 +17,7 @@ export default function RecipeItemList(props: RecipeItems) {
         {
           props.recipes &&
           props.recipes.map((recipe, index) => {
-            return <NavLink key={index} to={`/${recipe.id}`}>
+            return <NavLink key={index} to={`/${props.recipeType}/${recipe.id}`}>
               <Card variant="glass" classes="flex">
                 <div className="mr-3 w-28">
                   <Image
