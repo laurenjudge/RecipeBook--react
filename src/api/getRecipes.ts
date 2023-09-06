@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
 import { collection, getDocs } from "firebase/firestore";
 import { database } from "../firebase.config";
-
-const COLLECTION_OPTIONS = ['dinner-recipe', 'cocktail', 'baking'] as const
-
-type CollectionOptions = typeof COLLECTION_OPTIONS[number]
+import { CollectionOptions } from '../types/recipes.types'
 
 export default function getRecipes(collectionName: CollectionOptions) {
 

@@ -1,9 +1,11 @@
+import { NavLink } from 'react-router-dom'
 import Card from './Card'
 import Image from './Image'
-import { RecipeList } from '../types/recipes.types'
+import { CollectionOptions, RecipeList } from '../types/recipes.types'
 
 interface RecipeItems {
   recipes: RecipeList
+  recipeType: CollectionOptions
   isLoading: boolean
   hasError: boolean
 }
@@ -15,17 +17,25 @@ export default function RecipeItemList(props: RecipeItems) {
         {
           props.recipes &&
           props.recipes.map((recipe, index) => {
-            return <Card variant="glass" key={index} classes="flex">
-              <div className="mr-3 w-28">
-                <Image
-                  alt={recipe.name}
-                  src={recipe.image}
-                />
-              </div>
-              <h2 className="text-xl font-bold">
-                {recipe.name}
-              </h2>
-            </Card>
+            return <NavLink key={index} to={`/${recipe.id}`}>
+              <Card variant="glass" classes="flex">
+                <div className="mr-3 w-28">
+                  <Image
+                    alt={recipe.name}
+                    src={recipe.image}
+                  />
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold">
+                    {recipe.name}
+                  </h2>
+                  {
+                    recipe.description &&
+                    <p>{recipe.description}</p>
+                  }
+                </div>
+              </Card>
+            </NavLink>
           })
         }
 
@@ -38,6 +48,11 @@ export default function RecipeItemList(props: RecipeItems) {
                 <div className="w-3/5 h-5 bg-gray-200 rounded-full animate-pulse"></div>
               </Card>
           )
+        }
+
+        {
+          props.hasError &&
+          <div>Oops, an error has occurred. Please reload the page.</div>
         }
       </div>
     </>
