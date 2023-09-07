@@ -4,7 +4,7 @@ export default function NavBar() {
   const navBarItems = [
     {
       label: 'Dinner Recipes',
-      path: '/',
+      path: '/dinner-recipes',
     },
     {
       label: 'Cocktail Recipes',
@@ -19,7 +19,7 @@ export default function NavBar() {
   return (
     <>
       <nav className="flex flex-wrap items-center justify-between p-6 bg-blue_gray drop-shadow-sm">
-      <NavLink to="/" className="flex items-center flex-shrink-0 mr-6 text-white">
+      <NavLink to="/dinner-recipes" className="flex items-center flex-shrink-0 mr-6 text-white">
         <span className="text-2xl text-white sm:text-3xl">
           Recipe<span className="text-blue_gray_light">Book</span>
         </span>

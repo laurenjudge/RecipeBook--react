@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import BakingList from "./pages/BakingList"
 import DinnerRecipes from "./pages/DinnerRecipes"
 import CocktailsList from "./pages/CocktailsList"
@@ -13,7 +13,8 @@ function App() {
       <NavBar/>
       <div className="w-11/12 max-w-[600px] mx-auto my-8">
         <Routes>
-          <Route path="/" element={<DinnerRecipes />} />
+          <Route path="/" element={<Navigate to="/dinner-recipes" />} />
+          <Route path="/dinner-recipes" element={<DinnerRecipes />} />
           <Route path="/cocktails" element={<CocktailsList />} />
           <Route path="/baking" element={<BakingList />} />
           <Route path={'/:recipeType/:id'} element={<RecipeDetails />} />
