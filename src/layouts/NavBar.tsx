@@ -19,11 +19,11 @@ export default function NavBar() {
   return (
     <>
       <nav className="flex flex-wrap items-center justify-between p-6 bg-blue_gray drop-shadow-sm">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
+      <NavLink to="/" className="flex items-center flex-shrink-0 mr-6 text-white">
         <span className="text-2xl text-white sm:text-3xl">
           Recipe<span className="text-blue_gray_light">Book</span>
         </span>
-      </div>
+      </NavLink>
       <ul className="flex items-center justify-end gap-4">
         {
           navBarItems.map((item) => 
