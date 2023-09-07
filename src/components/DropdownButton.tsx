@@ -18,7 +18,7 @@ export default function DropdownButton(props: IDropdownButtonProps) {
         className="w-20 pl-5 pr-10 font-bold text-gray-600 bg-white border-2 rounded appearance-none border-blue-600/50 text-md hover:border-blue-600/60 focus:outline-none">
         {
           Array.from(Array(9)).map(
-            (num, i) =>
+            (_, i) =>
               i >= 1 &&
               <option key={i} value={ i?.toString() }>
                 { i?.toString() }

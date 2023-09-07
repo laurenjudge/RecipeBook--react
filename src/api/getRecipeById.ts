@@ -20,7 +20,7 @@ export default function getRecipeById(collectionName?: CollectionOptions, id?: s
         setRecipe(newData as IRecipe)
         setIsLoading(false)
       })
-      .catch(err => {
+      .catch(() => {
         setIsLoading(false)
         setHasError(true)
       })

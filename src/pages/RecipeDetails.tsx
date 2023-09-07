@@ -5,15 +5,15 @@ import Card from "../components/Card"
 import Image from "../components/Image"
 import Loader from '../components/Loader'
 import DropdownButton from '../components/DropdownButton'
+import { CollectionOptions } from '../types/recipes.types'
 
 export default function RecipeDetails() {
   const { recipeType, id } = useParams()
   
   const {
     isLoading,
-    hasError,
     recipe,
-  } = getRecipeById(recipeType, id)
+  } = getRecipeById(recipeType as CollectionOptions, id)
 
   const [calculatedIngredients, setCalculatedIngredients] = useState<null | string[]>(null)
 

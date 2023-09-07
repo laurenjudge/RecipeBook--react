@@ -21,7 +21,7 @@ export default function getRecipes(collectionName: CollectionOptions) {
       setRecipes(newData)
       setIsLoading(false)
     })
-    .catch(err => {
+    .catch(() => {
       setIsLoading(false)
       setHasError(true)
     })
