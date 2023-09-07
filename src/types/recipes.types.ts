@@ -6,6 +6,7 @@ export interface IRecipe {
   ingredients: string[]
   instructions?: string[]
   description?: string
+  link?: string
   numberOfServings?: string
 }
 

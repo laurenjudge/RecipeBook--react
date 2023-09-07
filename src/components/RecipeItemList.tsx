@@ -32,7 +32,7 @@ export default function RecipeItemList(props: RecipeItems) {
                   </h2>
                   {
                     recipe.description &&
-                    <p className="text-gray-500">{recipe.description}</p>
+                    <p className="text-sm text-gray-500 sm:text-base">{recipe.description}</p>
                   }
                 </div>
               </Card>
