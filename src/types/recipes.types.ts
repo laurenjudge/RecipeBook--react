@@ -6,6 +6,7 @@ export interface IRecipe {
   ingredients: string[]
   instructions?: string[]
   description?: string
+  numberOfServings?: string
 }
 
 export type RecipeList = IRecipe[]

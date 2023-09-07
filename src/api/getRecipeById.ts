@@ -3,7 +3,7 @@ import { getDoc, doc } from "firebase/firestore";
 import { database } from "../firebase.config";
 import { CollectionOptions, IRecipe } from '../types/recipes.types'
 
-export default function getRecipeById(collectionName: CollectionOptions, id: string) {
+export default function getRecipeById(collectionName?: CollectionOptions, id?: string) {
 
   const [isLoading, setIsLoading] = useState(false)
   const [hasError, setHasError] = useState(false)
