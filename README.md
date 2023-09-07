@@ -23,5 +23,4 @@ View live: https://recipebook-f1fdd.web.app/
 1. firebase init
 2. sign into firebase
 3. install firebase hosting (set default folder to 'dist')
-4. npm run build
-5. firebase deploy
+4. npm run deploy
